@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+* {box-sizing:border-box;     background-color: rgb(255, 229, 143);
+}
+
+body{
+    background-color: rgb(255, 230, 147);
+}
+
+.cabecalho{
+    width:100%
+}
+
+.tiles{
+    background-image: url(../img/tiles.png);
+    height: 200px;
+    width: 100%;
+}
+
+.tiles img{
+    position: absolute;
+    width: 12%;
+    background: none;
+}
+
+.navbar{
+    background-color: rgb(255, 0, 0);
+    text-decoration: none;
+    position:fixed
+
+
+}
+
+.navbar *{
+    background-color: rgb(255, 0, 0);
+
+}
+
+.nav-link{
+    color: white;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.nav-link:hover{
+    color: rgb(199, 199, 199);
+    background-color: rgb(202, 0, 0);
+    font-weight: bold;
+}
+
+.navbar-brand{
+    color: white;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.navbar-brand:hover{
+    color: rgb(199, 199, 199);
+    font-weight: bold;
+}
+
+.conteudo{
+    padding: 50px;
+}
+
+.info{
+    z-index: 10;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: table;
+}
+
+.hot_dog{
+    float: left;
+    width: 50%;
+}
+
+.info h1{
+    text-align: center;
+}
+
+.hot_dog img{
+    width: 70%;
+}
+
+.info .text{
+    float: right;
+    width: 50%;
+    font-size: 36px;
+}
+
+.frase{
+    height: 880px;
+    z-index: 10; 
+    background: url(../img/bolha.svg) no-repeat fixed center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.frase .text{
+    margin-top: 100px;
+    float: right;
+    width: 50%;
+    font-size: 36px;
+}
+
+.frase h2{
+    font-size: 32px;
+    opacity: 50%;
+}
+
+.rodape{
+    width: 100%;
+    padding: 50px;
+    padding-bottom: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(230, 0, 0);
+    z-index: 10;
+}
+
+.rodape *{
+    background-color: rgb(230, 0, 0);
+}
+
+.rodape h2{
+    font-size: 12px;
+    padding-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.rodape hr{
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.rodape .toproda{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px
+}
+
+.rodape .roda img{
+    width: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    user-select: none;
+    cursor: pointer;
+    transition: .3s ease
+}
+
+.rodape .roda img:hover{
+    transform: scale(1.5);
+    opacity: 75%;
+}
+
+
+
+
