@@ -231,6 +231,12 @@ body{
 .pessoas {
 	font-weight: bold;
 	font-size: 15pt;
+	
+}
+
+.pessoas img{
+	height: 15pt;
+	
 }
 
 
