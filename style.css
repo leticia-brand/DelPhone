@@ -1,6 +1,8 @@
 @charset "utf-8";
 
-* {box-sizing:border-box;     background-color: rgb(255, 229, 143);
+* {
+    box-sizing:border-box;
+    background-color: rgb(255, 229, 143);
 }
 
 body{
@@ -150,4 +152,9 @@ body{
 .rodape .roda img:hover{
     transform: scale(1.5);
     opacity: 75%;
+}
+
+.pessoas {
+	font-weight: bold;
+	font-size: 15pt;
 }
