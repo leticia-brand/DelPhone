@@ -1,8 +1,6 @@
 @charset "utf-8";
 
-* {
-    box-sizing:border-box;
-    background-color: rgb(255, 229, 143);
+* {box-sizing:border-box;     background-color: rgb(255, 229, 143);
 }
 
 body{
@@ -14,22 +12,60 @@ body{
 }
 
 .tiles{
-    background-image: url(../img/tiles.png);
+    background-color: rgb(255, 115, 0);
     height: 200px;
     width: 100%;
+    
 }
 
-.tiles img{
+.center{
+    position: relative;
+}
+
+.center img:nth-child(1){
     position: absolute;
     width: 12%;
+    top: 20px;
+    left: 25%;
     background: none;
+}
+
+.center img:nth-child(2){
+    position: absolute;
+    top: 100px;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background: none;
+}
+
+.center .restrito{
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    transform: translate(-50%, -50%);
+    background: none;
+    transition: .5s;
+}
+
+.center .restrito img{
+    transition: .5s;
+}
+
+.center .restrito img:hover{
+    transform-origin: center center;
+    transform: scale(1.5);
+
 }
 
 .navbar{
     background-color: rgb(255, 0, 0);
     text-decoration: none;
-    position:fixed
 
+
+}
+
+.navbar-nav{
+    position:relative;
 
 }
 
@@ -61,6 +97,31 @@ body{
     font-weight: bold;
 }
 
+.cadastro{
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    border-radius: 30px;
+    padding: 10px;
+    background: none;
+    font-weight: bold;
+    transition: .5s ease;
+    right: 20px;
+}
+
+.cadastro a{
+    color: white;
+    background: none;
+}
+
+.cadastro:hover{
+    background-color: rgb(168, 6, 6);
+}
+
+.cadastro a:hover{
+    text-decoration: none;
+    color: white;
+}
+
 .conteudo{
     padding: 50px;
 }
@@ -68,7 +129,7 @@ body{
 .info{
     z-index: 10;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 0px;
     display: table;
 }
 
@@ -89,6 +150,7 @@ body{
     float: right;
     width: 50%;
     font-size: 36px;
+    padding-right: 50px;
 }
 
 .frase{
@@ -113,6 +175,7 @@ body{
 
 .rodape{
     width: 100%;
+    padding-top: 0px;
     padding: 50px;
     padding-bottom: 10px;
     color: rgb(0, 0, 0);
@@ -122,17 +185,19 @@ body{
 
 .rodape *{
     background-color: rgb(230, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .rodape h2{
-    font-size: 12px;
+    font-size: 18px;
     padding-bottom: 20px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .rodape hr{
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
 }
+
 
 .rodape .toproda{
     display: flex;
@@ -149,12 +214,20 @@ body{
     transition: .3s ease
 }
 
+.rodape .redes a{
+    transition: .3s ease
+
+}
+
+.rodape .redes a:hover{
+    color: rgb(204, 204, 204);
+}
+
 .rodape .roda img:hover{
     transform: scale(1.5);
     opacity: 75%;
 }
 
-.pessoas {
-	font-weight: bold;
-	font-size: 15pt;
-}
+
+
+
