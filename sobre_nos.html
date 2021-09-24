@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-		<meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href=""/>
         <title>DelPhone</title>
-        <link href="style.css" rel="stylesheet">
+        <link href="front_end/style.css" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
         <link rel="shortcut icon" href="img/logotipo.jpg">
+        <script src="jquery/jquery.min.js"></script>
+        <script src="jquery/popper.min.js"></script>
+        <script src="front_end/interaction.js"></script>
         <script src="bootstrap/bootstrap.min.js"></script>
-		<script src="bootstrap/bootstrap-grid.css"></script>
-<head>
+    </head>
+
+    <body>
+
+        <div class="cabecalho">
+            <div class="tiles">
+              <div class="center">
+                <img src="img/DELPHONE.png">
+                <img src="img/nome_sem_fundo.png"> 
+                <a class="restrito" href="#"><img style="width: 40px" src="img/cadeado.svg"></a>             
+              </div>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">MENU</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">DÚVIDAS FREQUENTES</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">CONTATOS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">QUEM SOMOS?</a>
+                    </li>
+                    <li class="cadastro">
+                      <a href="#">CADASTRAR</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+        
+        <div class="conteudo">
+            <center>
 <h1>
 <center> Sobre nós </center>
 
@@ -30,42 +69,81 @@
 
 		<div class = "container">
 			<div class = "row">
-				<div class = "col">
+			
+				<div class = "pessoas">
 		<img src="img/Andre.png">
 		<h5 class = "pessoas"> André Felipe (PR) </h5>
-		O sensato tradutor, que entende as loucuras do Darlan e as torna possíveis.
+		<h6>O sensato tradutor, que</h6>
+		<h6>entende as loucuras do Darlan </h6>
+		<h6>e as torna possíveis.</h6>
 				</div>
-				<div class="col">
-		<img src="img/Darlan.png">
-		<h5  class = "pessoas"> Darlan Araújo (SP) </h5 >
-		O hacker, para quê Stack Overflow quando se tem ele? 
+				
+				<div class = "pessoas">
+		<img src="img/darlanzinho.png">
+		<h5  class = "pessoas"> Darlan Araújo (SP) </h5>
+		<h6>O hacker, para quê Stack Overflow</h6>
+		<h6>quando se tem ele?</h6>
 				</div>
-				<div class = "col">
-		<img src="img/Leticia.png">
-		<h5  class = "pessoas"> Letícia Brandão (DF) </h5 >
-		Nem ideia do que colocar aqui
+				
+				<div class = "pessoas">
+		<img src="img/leticinha_nossa_rainha.png">
+		<h5  class = "pessoas"> Letícia Brandão (DF) </h5>
+		<h6>Leticinha, nossa rainha</h6>
 				</div>
 		
-				<div class = "col">
-		<img src="img/Paloma.png">
-		<h5 class = "pessoas"> Paloma Borges (MG) </h5 >
-		A empreendedora, mostra sempre uma nova visão das empresas e das necessidades delas.
+				<div class = "pessoas">
+		<img src="img/palominha.png">
+		<h5 class = "pessoas"> Paloma Borges (MG) </h5>
+		<h6>A empreendedora, mostra sempre</h6>
+		<h6>uma nova visão das empresas</h6>
+		<h6>e das necessidades delas.</h6>
 				</div>
 		
-				<div class = "col">
-		<img src="img/Pedro.png">
+				<div class = "pessoas">
+		<img src="img/pedrinho.png">
 		<h5 class = "pessoas"> Pedro Garcia (AM) </h5>
-		O design gráfico, cria logos e define paletas, responsável pela identidade visual do projeto.
+		<h6>O designer gráfico, cria logos</h6>
+		<h6>e define paletas, responsável </h6>
+		<h6>pela identidade visual do projeto.</h6>
 				</div>
 			</div>
 		</div>
 		
 		
-		<h2> Onde queremos chegar </h2>
+		<h2> Aonde queremos chegar </h2>
 		
 		<p>Para jovens que conseguiram ingressar em uma faculdade de excelência com bolsa integral apesar de tudo, nada é impossível. </p>
  
 	</article>
-</body>
+            </center>
+        </div>
+
+        <div class="rodape space">
+            <div class="toproda" align="center">
+                <div class="roda">
+                    <h2>Redes Sociais</h2>
+                    <img src="img/twiter.svg">
+                    <img src="img/youtube.svg">
+                    <img src="img/facebook.svg">
+                    <img src="img/instagram.svg">
+                </div>
+                <div class="roda">
+                    <nav class="redes">
+                      <h2>Navegação</h2>
+                        <a href="#">Menu</a><br>
+                        <a href="#">Dúvidas frequentes</a><br>
+                        <a href="#">Contatos</a><br>
+                        <a href="#">Quem somos?</a>
+                    </nav>
+                </div>
+            </div>
+    
+            <hr>
+            <div class="final">
+                @ 2021 DelPhone
+            </div>
+        </div>
+        
+    </body>
 
 </html>
