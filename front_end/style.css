@@ -244,3 +244,75 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.bodycadastro {
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgb(255, 230, 147);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.bodycadastro h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.bodycadastro form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(255, 115, 0);
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 35px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.bodycadastro form label {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    background: rgb(255, 115, 0);
+}
+
+.bodycadastro form label span {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    text-align: left;
+    background: rgb(255, 115, 0);
+}
+
+.bodycadastro form input {
+    background: rgb(235, 235, 235);
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid #040B18;
+    border-radius: 8px;
+}
+
+.bodycadastro form input[type="submit"] {
+    cursor: pointer;
+    width: 30%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border: none;
+    border-radius: 32px;
+    background: rgb(255, 50, 0);
+    color: white;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
+}
+
+.bodycadastro form input[type="submit"]:hover {
+    background: rgb(255, 115, 0);
+}
