@@ -136,7 +136,7 @@ body{
 
 .hot_dog{
     float: left;
-    width: 50%;
+    width: 40%;
 }
 
 .info h1{
@@ -149,9 +149,9 @@ body{
 
 .info .text{
     float: right;
-    width: 50%;
-    font-size: 36px;
-    padding-right: 50px;
+    width: 60%;
+    font-size: 32px;
+    padding-right: 80px;
 }
 
 .frase{
