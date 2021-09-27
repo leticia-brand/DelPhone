@@ -1,0 +1,86 @@
+@charset "utf-8"
+
+@use 'variables'
+@use 'colors'
+
+@import 'rodape'
+@import 'cadastro'
+@import 'navegation'
+
+
+
+
+*   
+    box-sizing: border-box
+    background-color: colors.$back_1
+
+
+body
+    background-color: colors.$back_2
+
+
+.conteudo
+    padding: variables.$dez_space *5
+
+
+.hot_dog
+    float: left
+    width: 40%
+    
+    img
+        width: 70%
+
+
+.info
+    z-index: 10
+    padding:
+        top: variables.$cem_space
+        bottom: 0px
+    display: table
+
+    h1
+        text-align: center
+
+    .text
+        float: right
+        width: variables.$quarter_width *2.4
+        font-size: 32px
+        padding-right: variables.$dez_space * 8
+
+
+.frase
+    height: 880px
+    z-index: 10 
+    background: url(../img/bolha.svg) no-repeat fixed center
+        size: cover
+    overflow: hidden
+
+
+    .text
+        margin-top: variables.$cem_space
+        float: right
+        width: variables.$half_width
+        font-size: 36px
+
+
+    h2
+        font-size: 32px
+        opacity: variables.$half_width
+
+        
+.pessoas 
+    text-align: center	
+
+
+    h5
+        font:
+            weight: bold
+            size: 15.3pt
+
+
+    img
+        height: 100pt
+        display: block
+        margin:
+            left: auto
+            right: auto

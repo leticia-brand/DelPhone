@@ -1,0 +1,48 @@
+@use 'variables'
+@use 'colors'
+
+.rodape
+    width: variables.$full_width
+    padding: variables.$dez_space *5
+        top: variables.$dez_space *0
+        bottom: variables.$dez_space 
+    color: black
+    background-color: colors.$vermelho_3
+    z-index: 10
+
+    *
+        background-color: colors.$vermelho_3
+        color: white
+
+    h2
+        font-size: 18px
+        padding-bottom: variables.$dez_space * 2
+        color: white
+
+    hr
+        border: 1px solid white
+
+    .toproda
+        display: flex
+        justify-content: space-around
+        margin-bottom: variables.$dez_space * 5
+
+
+    .roda img
+        width: variables.$dez_space * 3
+        margin:
+            right: variables.$dez_space 
+            left: variables.$dez_space 
+        user-select: none
+        cursor: pointer
+        transition: .3s ease
+
+        :hover
+            transform: scale(1.5)
+            opacity: variables.$quarter_width * 3
+
+    .redes a
+        transition: .3s ease
+
+        :hover
+            color: colors.$cinza_2

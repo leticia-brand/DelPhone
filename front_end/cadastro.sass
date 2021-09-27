@@ -1,0 +1,82 @@
+@use '_variables'
+@use '_colors'
+
+%center-text
+    text-align: center
+
+@mixin flex ($bold: bold)
+    display: flex
+    flex-direction: column
+    font-weight: $bold
+    
+
+.bodycadastro 
+    font-size: 1rem
+    @extend %center-text
+    background:
+        color: colors.$back_2
+        attachment: fixed
+        size: variables.$full_width variables.$full_width
+
+
+    h1 
+        font-size: 3rem
+        margin:
+            top: 2rem
+            bottom: .5rem
+        @extend %center-text
+
+
+    form 
+        @include flex ($bold: normal)
+        align-items: center
+        background: colors.$laranja_1
+        width: 30%
+        @extend %center-text
+        border-radius: 35px
+        margin: 0 auto
+            top: 15px
+            bottom: variables.$dez_space *4
+
+
+        label 
+            @include flex
+            margin-left: 0
+            background: colors.$laranja_1
+
+
+            span 
+                font-size: 1.1rem
+                margin-top: 1.5rem
+                text-align: left
+                background: colors.$laranja_1
+
+
+        input 
+            background: colors.$cinza_3
+            width: variables.$cem_space * 3
+            height: variables.$dez_space * 5
+            padding: 0 0.5rem
+            margin-top: 1rem
+            outline: none
+            font-size: 1rem
+            border: 1px solid #040B18
+                radius: 8px
+
+
+            [type="submit"] 
+                cursor: pointer
+                width: 30%
+                margin:
+                    top: 4rem
+                    bottom: 4rem
+                border: none
+                    radius: 32px
+                background: colors.$laranja_2
+                color: white
+                font-size: 1.1rem
+                transition: all .3s ease-in-out
+
+
+                :hover 
+                    background: colors.$laranja_1
