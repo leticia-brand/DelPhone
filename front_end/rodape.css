@@ -1,0 +1,47 @@
+.rodape {
+  width: 100%;
+  padding: 50px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  color: black;
+  background-color: #e60000;
+  z-index: 10;
+}
+.rodape * {
+  background-color: #e60000;
+  color: white;
+}
+.rodape h2 {
+  font-size: 18px;
+  padding-bottom: 20px;
+  color: white;
+}
+.rodape hr {
+  border: 1px solid white;
+}
+.rodape .toproda {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.rodape .roda img {
+  width: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.rodape .roda img :hover {
+  transform: scale(1.5);
+  opacity: 75%;
+}
+.rodape .redes a {
+  transition: 0.3s ease;
+}
+.rodape .redes a :hover {
+  color: #cccccc;
+}/*# sourceMappingURL=rodape.css.map */

@@ -1,318 +1,281 @@
-@charset "utf-8";
-
-* {box-sizing:border-box;     background-color: rgb(255, 229, 143);
+.rodape {
+  width: 100%;
+  padding: 50px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  color: black;
+  background-color: #e60000;
+  z-index: 10;
+}
+.rodape * {
+  background-color: #e60000;
+  color: white;
+}
+.rodape h2 {
+  font-size: 18px;
+  padding-bottom: 20px;
+  color: white;
+}
+.rodape hr {
+  border: 1px solid white;
+}
+.rodape .toproda {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.rodape .roda img {
+  width: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.rodape .roda img :hover {
+  transform: scale(1.5);
+  opacity: 75%;
+}
+.rodape .redes a {
+  transition: 0.3s ease;
+}
+.rodape .redes a :hover {
+  color: #cccccc;
 }
 
-body{
-    background-color: rgb(255, 230, 147);
-}
-
-.cabecalho{
-    width:100%
-}
-
-.tiles{
-    background-color: rgb(255, 115, 0);
-    height: 200px;
-    width: 100%;
-    
-}
-
-.center{
-    position: relative;
-}
-
-.center img:nth-child(1){
-    position: absolute;
-    width: 12%;
-    top: 20px;
-    left: 25%;
-    background: none;
-}
-
-.center img:nth-child(2){
-    position: absolute;
-    width: 40%;
-    top: 100px;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    background: none;
-}
-
-.center .restrito{
-    position: absolute;
-    top: 10px;
-    right: 50px;
-    transform: translate(-50%, -50%);
-    background: none;
-    transition: .5s;
-}
-
-.center .restrito img{
-    transition: .5s;
-}
-
-.center .restrito img:hover{
-    transform-origin: center center;
-    transform: scale(1.5);
-
-}
-
-.navbar{
-    background-color: rgb(255, 0, 0);
-    text-decoration: none;
-
-
-}
-
-.navbar-nav{
-    position:relative;
-
-}
-
-.navbar *{
-    background-color: rgb(255, 0, 0);
-
-}
-
-.nav-link{
-    color: white;
-    font-weight: bold;
-    transition: .5s;
-}
-
-.nav-link:hover{
-    color: rgb(199, 199, 199);
-    background-color: rgb(202, 0, 0);
-    font-weight: bold;
-}
-
-.navbar-brand{
-    color: white;
-    font-weight: bold;
-    transition: .5s;
-}
-
-.navbar-brand:hover{
-    color: rgb(199, 199, 199);
-    font-weight: bold;
-}
-
-.cadastro{
-    border: 2px solid rgb(255, 255, 255);
-    color: white;
-    border-radius: 30px;
-    padding: 10px;
-    background: none;
-    font-weight: bold;
-    transition: .5s ease;
-    right: 20px;
-}
-
-.cadastro a{
-    color: white;
-    background: none;
-}
-
-.cadastro:hover{
-    background-color: rgb(168, 6, 6);
-}
-
-.cadastro a:hover{
-    text-decoration: none;
-    color: white;
-}
-
-.conteudo{
-    padding: 50px;
-}
-
-.info{
-    z-index: 10;
-    padding-top: 100px;
-    padding-bottom: 0px;
-    display: table;
-}
-
-.hot_dog{
-    float: left;
-    width: 40%;
-}
-
-.info h1{
-    text-align: center;
-}
-
-.hot_dog img{
-    width: 70%;
-}
-
-.info .text{
-    float: right;
-    width: 60%;
-    font-size: 32px;
-    padding-right: 80px;
-}
-
-.frase{
-    height: 880px;
-    z-index: 10; 
-    background: url(../img/bolha.svg) no-repeat fixed center;
-    background-size: cover;
-    overflow: hidden;
-}
-
-.frase .text{
-    margin-top: 100px;
-    float: right;
-    width: 50%;
-    font-size: 36px;
-}
-
-.frase h2{
-    font-size: 32px;
-    opacity: 50%;
-}
-
-.rodape{
-    width: 100%;
-    padding-top: 0px;
-    padding: 50px;
-    padding-bottom: 10px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(230, 0, 0);
-    z-index: 10;
-}
-
-.rodape *{
-    background-color: rgb(230, 0, 0);
-    color: rgb(255, 255, 255);
-}
-
-.rodape h2{
-    font-size: 18px;
-    padding-bottom: 20px;
-    color: rgb(255, 255, 255);
-}
-
-.rodape hr{
-    border: 1px solid rgb(255, 255, 255);
-}
-
-
-.rodape .toproda{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 50px
-}
-
-.rodape .roda img{
-    width: 30px;
-    margin-right: 10px;
-    margin-left: 10px;
-    user-select: none;
-    cursor: pointer;
-    transition: .3s ease
-}
-
-.rodape .redes a{
-    transition: .3s ease
-
-}
-
-.rodape .redes a:hover{
-    color: rgb(204, 204, 204);
-}
-
-.rodape .roda img:hover{
-    transform: scale(1.5);
-    opacity: 75%;
-}
-
-.pessoas {
-	text-align: center;	
-}
-
-.pessoas h5{
-	font-weight: bold;
-	font-size: 15.3pt;
-}
-
-.pessoas img{
-	height: 100pt;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+.bodycadastro form, .bodycadastro h1, .bodycadastro {
+  text-align: center;
 }
 
 .bodycadastro {
-    font-size: 1rem;
-    text-align: center;
-    background-color: rgb(255, 230, 147);
-    background-attachment: fixed;
-    background-size: 100% 100%;
+  font-size: 1rem;
+  background-color: #ffe693;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
-
 .bodycadastro h1 {
-    font-size: 3rem;
-    margin-top: 2rem;
-    margin-bottom: .5rem;
-    text-align: center;
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
-
 .bodycadastro form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgb(255, 115, 0);
-    width: 30%;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 35px;
-    margin-top: 15px;
-    margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+  align-items: center;
+  background: #ff7300;
+  width: 30%;
+  border-radius: 35px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 40px;
 }
-
 .bodycadastro form label {
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    margin-left: 0;
-    background: rgb(255, 115, 0);
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  margin-left: 0;
+  background: #ff7300;
 }
-
 .bodycadastro form label span {
-    font-size: 1.1rem;
-    margin-top: 1.5rem;
-    text-align: left;
-    background: rgb(255, 115, 0);
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  text-align: left;
+  background: #ff7300;
 }
-
 .bodycadastro form input {
-    background: rgb(235, 235, 235);
-    width: 300px;
-    height: 50px;
-    padding: 0 0.5rem;
-    margin-top: 1rem;
-    outline: none;
-    font-size: 1rem;
-    border: 1px solid #040B18;
-    border-radius: 8px;
+  background: #ebebeb;
+  width: 300px;
+  height: 50px;
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+  outline: none;
+  font-size: 1rem;
+  border: 1px solid #040B18;
+  border-radius: 8px;
+}
+.bodycadastro form input [type=submit] {
+  cursor: pointer;
+  width: 30%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border: none;
+  border-radius: 32px;
+  background: #ff3200;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+.bodycadastro form input [type=submit] :hover {
+  background: #ff7300;
 }
 
-.bodycadastro form input[type="submit"] {
-    cursor: pointer;
-    width: 30%;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    border: none;
-    border-radius: 32px;
-    background: rgb(255, 50, 0);
-    color: white;
-    font-size: 1.1rem;
-    transition: all .3s ease-in-out;
+.center .restrito, .center img:nth-child(2), .center img:nth-child(1) {
+  background: none;
+  position: absolute;
 }
 
-.bodycadastro form input[type="submit"]:hover {
-    background: rgb(255, 115, 0);
+.cabecalho {
+  width: 100%;
 }
+
+.tiles {
+  background-color: #ff7300;
+  height: 200px;
+  width: 100%;
+}
+
+.center {
+  position: relative;
+}
+.center img:nth-child(1) {
+  width: 12%;
+  top: 20px;
+  left: 25%;
+}
+.center img:nth-child(2) {
+  width: 40%;
+  top: 100px;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+.center .restrito {
+  top: 10px;
+  right: 50px;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+.center .restrito img {
+  transition: 0.5s;
+}
+.center .restrito img :hover {
+  transform: scale(1.5);
+  transform-origin: center center;
+}
+
+.navbar {
+  background-color: red;
+  text-decoration: none;
+}
+.navbar * {
+  background-color: red;
+}
+
+.navbar-nav {
+  position: relative;
+}
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.nav-link :hover {
+  color: #c7c7c7;
+  background-color: #ca0000;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.cadastro {
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  padding: 10px;
+  background: none;
+  font-weight: bold;
+  transition: 0.5s ease;
+  right: 20px;
+}
+.cadastro :hover {
+  background-color: #a80606;
+}
+.cadastro a {
+  color: white;
+  background: none;
+}
+.cadastro a :hover {
+  text-decoration: none;
+  color: white;
+}
+.cadastro :hover {
+  color: #c7c7c7;
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: #ffe58f;
+}
+
+body {
+  background-color: #ffe693;
+}
+
+.conteudo {
+  padding: 50px;
+}
+
+.hot_dog {
+  float: left;
+  width: 40%;
+}
+.hot_dog img {
+  width: 70%;
+}
+
+.info {
+  z-index: 10;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  display: table;
+}
+.info h1 {
+  text-align: center;
+}
+.info .text {
+  float: right;
+  width: 60%;
+  font-size: 32px;
+  padding-right: 80px;
+}
+
+.frase {
+  height: 880px;
+  z-index: 10;
+  background: url(../img/bolha.svg) no-repeat fixed center;
+  background-size: cover;
+  overflow: hidden;
+}
+.frase .text {
+  margin-top: 100px;
+  float: right;
+  width: 50%;
+  font-size: 36px;
+}
+.frase h2 {
+  font-size: 32px;
+  opacity: 50%;
+}
+
+.pessoas {
+  text-align: center;
+}
+.pessoas h5 {
+  font-weight: bold;
+  font-size: 15.3pt;
+}
+.pessoas img {
+  height: 100pt;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}/*# sourceMappingURL=style.css.map */

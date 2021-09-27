@@ -1,0 +1,97 @@
+.center .restrito, .center img:nth-child(2), .center img:nth-child(1) {
+  background: none;
+  position: absolute;
+}
+
+.cabecalho {
+  width: 100%;
+}
+
+.tiles {
+  background-color: #ff7300;
+  height: 200px;
+  width: 100%;
+}
+
+.center {
+  position: relative;
+}
+.center img:nth-child(1) {
+  width: 12%;
+  top: 20px;
+  left: 25%;
+}
+.center img:nth-child(2) {
+  width: 40%;
+  top: 100px;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+.center .restrito {
+  top: 10px;
+  right: 50px;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+.center .restrito img {
+  transition: 0.5s;
+}
+.center .restrito img :hover {
+  transform: scale(1.5);
+  transform-origin: center center;
+}
+
+.navbar {
+  background-color: red;
+  text-decoration: none;
+}
+.navbar * {
+  background-color: red;
+}
+
+.navbar-nav {
+  position: relative;
+}
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.nav-link :hover {
+  color: #c7c7c7;
+  background-color: #ca0000;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.cadastro {
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  padding: 10px;
+  background: none;
+  font-weight: bold;
+  transition: 0.5s ease;
+  right: 20px;
+}
+.cadastro :hover {
+  background-color: #a80606;
+}
+.cadastro a {
+  color: white;
+  background: none;
+}
+.cadastro a :hover {
+  text-decoration: none;
+  color: white;
+}
+.cadastro :hover {
+  color: #c7c7c7;
+  font-weight: bold;
+}/*# sourceMappingURL=navegation.css.map */
