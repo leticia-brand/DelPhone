@@ -1,61 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>DelPhone</title>
-	<!-- CSS da página -->
-        <link href="{% static 'delphone/style.css' %}" rel="stylesheet">
-	<!-- CSS do Bootstrap -->
-        <link rel="stylesheet" href="{% static 'delphone/bootstrap/bootstrap.min.css' %}">
-        <link rel="sortcut icon" href="{% static 'delphone/img/logotipo.png' %}">
-        <script src="{% templates 'delphone/jquery/jquery.min.js' %}"></script>
-        <script src="{% templates 'delphone/jquery/popper.min.js' %}"></script>
-        <script src="{% templates 'delphone/interaction.js' %}"></script>
-        <script src="{% templates 'delphone/bootstrap/bootstrap.min.js' %}"></script>
-    </head>
+{% extends "delphone/base_generic.html" %}
 
-    <body>
-	<!-- Cabeçalho -->
-        <div class="cabecalho">
-            <div class="tiles">
-              <div class="center">
-                <img alt="logotipo" src="{% templates 'delphone/img/DELPHONE.png' %}">
-                <img alt="DelPhone" src="{% templates 'delphone/img/nome_sem_fundo.png' %}"> 
-		<!-- Botão de Login -->
-                <a class="restrito" href="{% static 'delphone/login.html' %}"><img alt="cadeado" style="width: 40px" src="{% templates 'delphone/img/cadeado.svg' %}"></a>             
-              </div>
-            </div>
-		<!-- Barra de navegação -->
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="{% static 'delphone/menu.html' %}">MENU</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="{% static 'delphone/como_funcionamos.html' %}">COMO FUNCIONAMOS</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{% static 'delphone/faq.html' %}">PERGUNTAS FREQUENTES</a>
-                    </li>					
-                    <li class="nav-item">
-                      <a class="nav-link" href="{% static 'delphone/sobre_nos.html' %}">SOBRE NÓS</a>
-                    </li>					
-                    <li class="nav-item">
-                      <a class="nav-link" href="{% static 'delphone/contatos.html' %}">CONTATOS</a>
-                    </li>
-                    <li class="cadastro">
-                      <a class="nav-link" href="{% static 'delphone/cadastro.html' %}">CADASTRAR</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-        </div>
-        
-        <div class="conteudo">
+{% load static %}
+
+{% block content %} 
+<div class="conteudo">
 		<center>
 		<h1>Perguntas Frequentes</h1>
 		</center>
@@ -300,37 +248,4 @@
 		<br>
 		
         </div>
-	<!-- Rodapé -->
-        <div class="rodape space">
-            <div class="toproda">
-                <div class="roda">
-		    <!-- Redes Sociais -->
-                    <h2>Redes Sociais</h2>
-                    <img alt="Twitter" src="{% url 'delphone/img/twiter.svg' %}">
-                    <img alt="YouTube" src="{% url 'delphone/img/youtube.svg' %}">
-                    <img alt="Facebook" src="{% url 'delphone/img/facebook.svg' %}">
-                    <img alt="Instagram" src="{% url 'delphone/img/instagram.svg' %}">
-                </div>
-                <div class="roda">
-		    <!-- Navegação -->
-                    <nav class="redes">
-                      <h2>Navegação</h2>
-                        <a href="{% url 'delphone/menu.html' %}">Menu</a><br>
-			<a href="{% url 'delphone/como_funcionamos.html' %}">Como funcionamos</a><br>
-                        <a href="{% url 'delphone/faq.html' %}">Perguntas frequentes</a><br>
-                        <a href="{% url 'delphone/sobre_nos.html' %}">Sobre nós</a><br>
-                        <a href="{% url 'delphone/contatos.html' %}">Contatos</a><br>
-                    </nav>
-                </div>
-            </div>
-    
-            <hr>
-	    <!-- Copyright -->
-            <div class="final">
-                @ 2021 DelPhone
-            </div>
-        </div>
-        
-    </body>
-
-</html>
+{% endblock %}
