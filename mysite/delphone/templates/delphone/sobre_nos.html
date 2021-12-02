@@ -1,0 +1,166 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DelPhone</title>
+	<!-- CSS da página -->
+        <link href="{% static 'delphone/style.css' %}" rel="stylesheet">
+	<!-- CSS do Bootstrap -->
+  <link rel="stylesheet" href="{% static 'delphone/bootstrap/bootstrap.min.css' %}">
+  <link rel="sortcut icon" href="{% static 'delphone/img/logotipo.png' %}">
+  <script src="{% static 'delphone/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'delphone/jquery/popper.min.js' %}"></script>
+  <script src="{% static 'delphone/interaction.js' %}"></script>
+  <script src="{% static 'delphone/bootstrap/bootstrap.min.js' %}"></script>
+    </head>
+
+    <body>
+	<!-- Cabeçalho -->
+        <div class="cabecalho">
+            <div class="tiles">
+              <div class="center">
+                <img alt="logotipo" src="{% static 'delphone/img/DELPHONE.png' %}">
+                <img alt="DelPhone" src="{% static 'delphone/img/nome_sem_fundo.png' %}"> 
+		<!-- Botão de Login -->
+                <a class="restrito" href="{% templates 'delphone/login.html' %}"><img alt="cadeado" style="width: 40px" src="{% static 'delphone/img/cadeado.svg' %}"></a>             
+              </div>
+            </div>
+	    <!-- Barra de navegação -->
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="{% templates 'delphone/menu.html' %}">MENU</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% templates 'delphone/como_funcionamos.html' %}">COMO FUNCIONAMOS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% templates 'delphone/faq.html' %}">PERGUNTAS FREQUENTES</a>
+                    </li>					
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% templates 'delphone/sobre_nos.html' %}">SOBRE NÓS</a>
+                    </li>					
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% templates 'delphone/contatos.html' %}">CONTATOS</a>
+                    </li>
+                    <li class="cadastro">
+                      <a class="nav-link" href="{% templates 'delphone/cadastro.html' %}">CADASTRAR</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+        
+        <div class="conteudo">
+      
+	<h1>
+	<center> Sobre nós </center>
+	</h1>
+
+	<article>
+		
+	<!-- Textos de apresentação -->
+	<h2> Como começamos </h2>		
+		<p>Apesar de o projeto só ter saído do papel por causa da necessidade de apresentar um trabalho para a faculdade, em conversas em rodas de amigos sempre expressamos vontade de buscar soluções para problemas reais, a fim de que possamos oferecer alguma melhoria para a sociedade em que vivemos. A ideia inicial era ajudar estudantes universitários que precisaram sair de suas cidades natais para concluir seus estudos a encontrarem serviços de delivery. Isso por si só já seria difícil, mas ainda queríamos mais: encontrar uma dor comum a todos, que não estivesse restrita a uma região, grupo social ou comunidade.</p>
+		<p>Assim, percebemos que não só os estudantes são afetados por essa problemática, mas também grande parte da população brasileira. A maioria das empresas de delivery precisam de muita demanda em um pequeno espaço urbano bem como trabalhadores dispostos a fazer os serviços de entrega para que seus serviços sejam lucrativos. Infelizmente, pequenas cidades ou até mesmo o entorno de grandes centros urbanos não são atendidos por causa da falta de um desses fatores. Dessa forma, favorecer os negócios locais, conectando prestadores de serviços aos seus clientes, foi a nossa solução. </p>
+		<p>Seguindo o princípio de acessibilidade e destaque para a realidade brasileira que não gira em torno das grandes metrópoles, optamos por tomar como inspiração de um bot de WhatsApp criado por habitantes da cidade de Parintins. Esse projeto tornou possível o reavivamento do comércio local mesmo durante a pandemia de COVID-19, além de oferecer maior segurança aos habitantes, que não precisam se expor para adquirir as mercadorias necessárias.</p>  
+		<p>Diante de todos esses problemas e motivados a apresentar uma solução, iniciamos o projeto em agosto de 2021, com a meta de expansão para o Brasil inteiro, no formato de site/aplicativo acessível a todos.</p>
+ 
+	<h2> Nosso time </h2>		
+		<p>Uma equipe formada por 5 estudantes de graduação da FGV-EMAp, graduandos em Matemática Aplicada e Ciência de Dados e Inteligência Artificial. Somos muito diferentes, mas compartilhamos uma característica: desejo de mudar nossas comunidades.</p>
+		
+		<!-- Imagens dos integrantes -->
+		<div class = "container">
+			<div class = "row">
+				<div class = "col">
+				<div class = "pessoas">
+		<img alt="André Felipe" src="{% static 'delphone/img/Andre.png' %}">
+		<h5 class = "pessoas"> André Felipe (PR) </h5>
+		O sensato tradutor, que entende as loucuras do Darlan e as torna possíveis.
+				</div>
+				</div>
+				<div class = "col">
+				<div class = "pessoas">
+		<img alt="Darlan Araújo" src="{% static 'delphone/img/Darlan.png' %}">
+		<h5  class = "pessoas"> Darlan Araújo (SP) </h5>
+		<p class = "pessoas">O hacker, para quê Stack Overflow quando se tem ele?</p>
+				</div>
+				</div>
+				<div class = "col">
+				<div class = "pessoas">
+		<img alt="Letícia Brandão" src="{% static 'delphone/img/Leticia.png' %}">
+		<h5  class = "pessoas"> Letícia Brandão (DF) </h5>
+		<p class = "pessoas">A inovadora, traz novas ideias e sempre descobre como resolver os problemas.
+				</div>
+				</div>
+				<div class = "col">
+				<div class = "pessoas">
+		<img alt="Paloma Borges" src="{% static 'delphone/img/Paloma.png' %}">
+		<h5 class = "pessoas"> Paloma Borges (MG) </h5>
+		<p class = "pessoas">A empreendedora, mostra sempre uma nova visão das empresas  e das necessidades delas. </p>
+				</div>
+				</div>
+				<div class = "col">
+				<div class = "pessoas">
+		<img alt="Pedro Garcia" src="{% static 'delphone/img/Pedro.png' %}">
+		<h5 class = "pessoas"> Pedro Garcia (AM) </h5>
+		<p class = "pessoas">O designer gráfico, cria logos e define paletas, responsável pela identidade visual do projeto.</p>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<h2> Nossas metas </h2>
+		<p>Para jovens que conseguiram ingressar em uma faculdade de excelência com bolsa integral apesar de tudo, nada é impossível. </p>
+		
+		<ul>
+		<li> Continuar trabalhando no projeto depois da avaliação da faculdade</li>
+		<li> Encontrar empresas dispostas a serem nossas parceiras</li>
+		<li> Ter colaboradores de todas as regiões do país</li>
+		<li> Possuir serviços de delivery cadastrados em todos os estados brasileiros</li>
+		<li> Criar um aplicativo funcional e gratuito</li>
+		</ul>	
+ 
+	</article>
+          
+        </div>
+
+	<!-- Rodapé -->
+        <div class="rodape space">
+            <div class="toproda">
+                <div class="roda">
+		    <!-- Redes Sociais -->
+                    <h2>Redes Sociais</h2>
+                    <img alt="Twitter" src="{% static 'delphone/img/twiter.svg' %}">
+                    <img alt="YouTube" src="{% static 'delphone/img/youtube.svg' %}">
+                    <img alt="Facebook" src="{% static 'delphone/img/facebook.svg' %}">
+                    <img alt="Instagram" src="{% static 'delphone/img/instagram.svg' %}">
+                </div>
+                <div class="roda">
+		    <!-- Navegação -->
+                    <nav class="redes">
+                      <h2>Navegação</h2>
+                      <a href="{% templates 'delphone/menu.html' %}">Menu</a><br>
+                      <a href="{% templates 'delphone/como_funcionamos.html' %}">Como funcionamos</a><br>
+                      <a href="{% templates 'delphone/faq.html' %}">Perguntas frequentes</a><br>
+                      <a href="{% templates 'delphone/sobre_nos.html' %}">Sobre nós</a><br>
+                      <a href="{% templates 'delphone/contatos.html' %}">Contatos</a><br>
+                    </nav>
+                </div>
+            </div>
+    
+            <hr>
+	    <!-- Copyright -->
+            <div class="final">
+                @ 2021 DelPhone
+            </div>
+        </div>
+        
+    </body>
+
+</html>
