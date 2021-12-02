@@ -8,6 +8,17 @@
 	<br>
 	<!-- Símbolos e formas fictícias de contato -->
 	<p><img src="{% static 'delphone/img/phone.png' %}" height="25" width="25" alt="símbolo telefone"> +55 (11) 91234-5678</p>
+
+	<p> {{dias_semana|join:", "|title| add:": "}} {{horarios|first}}</p>
+
+	{%for dia in dias_final %}
+	{% if dia == "DOMINGO" %}
+
+	<p>{{dias_final|first|title|add:": "}} {{horarios|last}}</p>
+
+	{% endif %}
+	{% endfor %}
+
 	<p><img src="{% static 'delphone/img/email.png' %}" height="25" width="25" alt="símbolo email"> contato@delphone.com.br</p>		
 </div>
 {% endblock %}

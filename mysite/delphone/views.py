@@ -12,7 +12,11 @@ def menu(request):
     return render(request, 'delphone/menu.html')
 
 def contatos(request):
-    return render(request, 'delphone/contatos.html')
+    dias_semana = ["SEGUNDA","TERÇA","QUARTA","QUINTA","SEXTA"]
+    dias_final = ["SÁBADO", "DOMINGO"]
+    horarios = ["9 - 18", "9 - 13"]
+    contexto = {"dias_semana": dias_semana, "dias_final": dias_final, "horarios": horarios}
+    return render(request, 'delphone/contatos.html', contexto)
 
 def faq(request):
     return render(request, 'delphone/faq.html')
@@ -28,4 +32,8 @@ def como_funcionamos(request):
 
 def sobre_nos(request):
     return render(request, 'delphone/sobre_nos.html')
+
+def redireciona(request):
+    direcionamento = reverse('delphone')
+    return HttpResponseRedirect(direcionamento)
 
