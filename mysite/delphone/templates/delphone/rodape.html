@@ -1,0 +1,28 @@
+{% load static %}
+
+<div class="rodape space">
+    <div class="toproda">
+        <div class="roda">
+        <!-- Redes Sociais -->
+            <h2>Redes Sociais</h2>
+            <img alt="Twitter" src="{% static 'delphone/img/twiter.svg' %}">
+            <img alt="YouTube" src="{% static 'delphone/img/youtube.svg' %}">
+            <img alt="Facebook" src="{% static 'delphone/img/facebook.svg' %}">
+            <img alt="Instagram" src="{% static 'delphone/img/instagram.svg' %}">
+        </div>
+        <div class="roda">
+        <nav class="redes">
+        <!-- Navegação -->
+            <h2>Navegação</h2>
+            <a href="{% url 'menu' %}">Menu</a><br>
+            <a href="{% url 'como_funcionamos' %}">Como funcionamos</a><br>
+            <a href="{% url 'faq' %}">Perguntas frequentes</a><br>
+            <a href="{% url 'sobre_nos' %}">Sobre nós</a><br>					
+            <a href="{% url 'contatos' %}">Contatos</a><br>
+        </nav>
+        </div>
+    </div>        
+    <hr>
+    <!-- Copyright -->    
+    <div class="final">@ 2021 DelPhone</div>
+</div>
