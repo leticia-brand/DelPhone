@@ -7,3 +7,6 @@ from django.http.response import HttpResponseNotFound, HttpResponseRedirect
 
 def index(request):
     return render(request, 'delphone/index.html')
+
+def cadastro(request):
+    return render(request, 'delphone/cadastro.html')
