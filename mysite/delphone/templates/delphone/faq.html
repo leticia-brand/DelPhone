@@ -306,20 +306,20 @@
                 <div class="roda">
 		    <!-- Redes Sociais -->
                     <h2>Redes Sociais</h2>
-                    <img alt="Twitter" src="{% templates 'delphone/img/twiter.svg' %}">
-                    <img alt="YouTube" src="{% templates 'delphone/img/youtube.svg' %}">
-                    <img alt="Facebook" src="{% templates 'delphone/img/facebook.svg' %}">
-                    <img alt="Instagram" src="{% templates 'delphone/img/instagram.svg' %}">
+                    <img alt="Twitter" src="{% url 'delphone/img/twiter.svg' %}">
+                    <img alt="YouTube" src="{% url 'delphone/img/youtube.svg' %}">
+                    <img alt="Facebook" src="{% url 'delphone/img/facebook.svg' %}">
+                    <img alt="Instagram" src="{% url 'delphone/img/instagram.svg' %}">
                 </div>
                 <div class="roda">
 		    <!-- Navegação -->
                     <nav class="redes">
                       <h2>Navegação</h2>
-                        <a href="{% static 'delphone/menu.html' %}">Menu</a><br>
-			<a href="{% static 'delphone/como_funcionamos.html' %}">Como funcionamos</a><br>
-                        <a href="{% static 'delphone/faq.html' %}">Perguntas frequentes</a><br>
-                        <a href="{% static 'delphone/sobre_nos.html' %}">Sobre nós</a><br>
-                        <a href="{% static 'delphone/contatos.html' %}">Contatos</a><br>
+                        <a href="{% url 'delphone/menu.html' %}">Menu</a><br>
+			<a href="{% url 'delphone/como_funcionamos.html' %}">Como funcionamos</a><br>
+                        <a href="{% url 'delphone/faq.html' %}">Perguntas frequentes</a><br>
+                        <a href="{% url 'delphone/sobre_nos.html' %}">Sobre nós</a><br>
+                        <a href="{% url 'delphone/contatos.html' %}">Contatos</a><br>
                     </nav>
                 </div>
             </div>
