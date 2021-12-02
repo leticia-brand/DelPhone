@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% block title %}<title>DelPhone</title>{% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+	<!-- CSS da página -->
+    <link href="{% static 'delphone/style.css' %}" rel="stylesheet">
+	<!-- CSS do Bootstrap -->
+    <link rel="stylesheet" href="{% static 'delphone/bootstrap/bootstrap.min.css' %}">
+    <link rel="sortcut icon" href="{% static 'delphone/img/logotipo.png' %}">
+    <script src="{% static 'delphone/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'delphone/jquery/popper.min.js' %}"></script>
+    <script src="{% static 'delphone/interaction.js' %}"></script>
+    <script src="{% static 'delphone/bootstrap/bootstrap.min.js' %}"></script>
+</head>
+<body>
+    <div class="cabecalho">
+    {% block header %}
+    <!-- Cabeçalho -->
+        <div class="tiles">
+            <div class="center">
+                <img alt="logotipo" src= "{% static 'delphone/img/DELPHONE.png' %}">
+                <img alt="DelPhone" src= "{% static 'delphone/img/nome_sem_fundo.png' %}"> 
+		        <!-- Botão de Login -->
+                <a class="restrito" href= "{% url 'login' %}"><img alt="cadeado" style="width: 40px" src= "{% static 'delphone/img/cadeado.svg' %}"></a>             
+            </div>
+        </div>
+	<!-- Barra de navegação -->
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="{% url 'menu' %}">MENU</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href= "{% url 'como_funcionamos' %}">COMO FUNCIONAMOS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href= "{% url 'faq' %}" >PERGUNTAS FREQUENTES</a>
+                    </li>					
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'sobre_nos'  %}">SOBRE NÓS</a>
+                    </li>					
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'contatos'  %}">CONTATOS</a>
+                    </li>
+                    <li class="cadastro">
+                      <a class="nav-link" href= "{% url 'cadastro'  %}">CADASTRAR</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    {% endblock %}
+    </div>
+
+    <div>
+    {% block content %}{% endblock %}
+    </div>
+
+    <div class="rodape space">
+    {% block footer %}
+        <div class="toproda">
+            <div class="roda">
+            <!-- Redes Sociais -->
+                <h2>Redes Sociais</h2>
+                <img alt="Twitter" src="{% static 'delphone/img/twiter.svg' %}">
+                <img alt="YouTube" src="{% static 'delphone/img/youtube.svg' %}">
+                <img alt="Facebook" src="{% static 'delphone/img/facebook.svg' %}">
+                <img alt="Instagram" src="{% static 'delphone/img/instagram.svg' %}">
+            </div>
+            <div class="roda">
+            <nav class="redes">
+            <!-- Navegação -->
+                <h2>Navegação</h2>
+                <a href="{% url 'menu' %}">Menu</a><br>
+                <a href="{% url 'como_funcionamos' %}">Como funcionamos</a><br>
+                <a href="{% url 'faq' %}">Perguntas frequentes</a><br>
+                <a href="{% url 'sobre_nos' %}">Sobre nós</a><br>					
+                <a href="{% url 'contatos' %}">Contatos</a><br>
+            </nav>
+            </div>
+        </div>        
+        <hr>
+        <!-- Copyright -->    
+        <div class="final">@ 2021 DelPhone</div>
+    {% endblock %}
+    </div>
+</body>
+</html>
