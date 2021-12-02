@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from django.urls import reverse
+from django.http.response import HttpResponseNotFound, HttpResponseRedirect
 # Create your views here.
 
 def index(request):
-    template = loader.get_template('delphone/index.html')
-    return HttpResponse("Bem-vindo ao nosso site")
+    return render(request, 'delphone/index.html')
