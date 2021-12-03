@@ -6,7 +6,6 @@ from django.db import models
 
 fake = Faker()
 
-
 class Empresa (models.Model):
     nome = models.CharField(max_length=100, help_text='Digite o nome da empresa')
     email = models.EmailField(max_length=50, help_text='Digite o email')
@@ -14,7 +13,6 @@ class Empresa (models.Model):
     endereco = models.CharField(max_length=200, help_text='Digite o endereço (rua e nº)')
     estado =  models.CharField(max_length=2 , help_text='Digite o estado')
     cidade =  models.CharField(max_length=200, help_text='Digite a cidade')
-    horario_func = models.TimeField(auto_now=False, auto_now_add=False, help_text='Digite o horário de funcionamento')
     setor = models.CharField(max_length=30, help_text='')
 
     objects = models.Manager()
@@ -25,28 +23,34 @@ class Empresa (models.Model):
 
     def __str__(self)-> str:
         """String for representing the Empresa object (in Admin site etc.)."""
-        return f'Nome: {self.nome} \n Email: {self.email} \n Celular: {self.celular} \n Endereço: {self.endereco} \n Estado: {self.estado} \n Cidade: {self.cidade} \n Horário de funcionamento: {self.horario_func} \n Setor: {self.setor} '
+        return f'Nome: {self.nome} \n Email: {self.email} \n Celular: {self.celular} \n Endereço: {self.endereco} \n Estado: {self.estado} \n Cidade: {self.cidade} \n Setor: {self.setor} '
 
     class Meta:
         ordering = ['nome']
 
-'''class Usuário(models.Model):
-    user = models.CharField(max_length=50, help_text='Digite o nome de usuario')
-    cidade = models.CharField(max_length=50, help_text='Digite a cidade')
+
+class Busca (models.Model):
+    estado =  models.CharField(max_length=2 , help_text='Digite o estado')
+    cidade =  models.CharField(max_length=200, help_text='Digite a cidade')
+    setor = models.CharField(max_length=30, help_text='')
+
+    objects = models.Manager()
+
     def get_absolute_url(self):
         """Returns the url to access a particular instance of Empresa."""
-        return reverse('usuario-detail', args=[str(self.id)])
-    def __str__(self):
+        return Reversible('busca-detail', args=[str(self.id)])
+
+    def __str__(self)-> str:
         """String for representing the Empresa object (in Admin site etc.)."""
-        return self.user
+        return f'Estado: {self.estado} \n Cidade: {self.cidade} \n Setor: {self.setor}'
+
     class Meta:
-        ordering = ['user']
-'''
+        ordering = ['estado']
+
+
 
 estados = pd.read_excel (r'delphone/cidades_estados.xlsx').values.tolist()
 setores = ['Alimentação', 'Cozinha', 'Eletrodomésticos', 'Esportes', 'Farmácia', 'Material de construção', 'Mobília', 'Música', 'Papelaria', 'Vestuário']
-
-
 
 for i in range(200):
     n = random.randint(0, len(estados)-1)
@@ -57,8 +61,14 @@ for i in range(200):
                 endereco=fake.address(), 
                 estado=estados[n][1], 
                 cidade=estados[n][0], 
-                horario_func=fake.date_time(), 
                 setor=setores[m])
     '''p.save()
-    Retiramos o comando pois ele adiciona rows todas as vezes'''
+    Comentamos o comando pois ele adiciona rows todas as vezes'''
 
+for i in range(5000):
+    m = random.randint(0, len(setores)-1)
+    p = Busca(estado=estados[i][1], 
+                cidade=estados[i][0],
+                setor=setores[m])
+    '''p.save()
+     Comentamos o comando pois ele adiciona rows todas as vezes'''
