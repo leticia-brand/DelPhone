@@ -3,10 +3,12 @@ from django.http import HttpResponse
 from django.template import loader
 from django.urls import reverse
 from django.http.response import HttpResponseNotFound, HttpResponseRedirect
+from .models import Empresa
 # Create your views here.
 
 def menu (request):
-    return render(request, 'delphone/menu.html')
+    contexto = {"empresas": Empresa.object.all()}
+    return render(request, 'delphone/menu.html', contexto)
 
 def contatos(request):
     dias_semana = ["SEGUNDA","TERÇA","QUARTA","QUINTA","SEXTA"]
