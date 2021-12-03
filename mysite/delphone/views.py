@@ -4,6 +4,8 @@ from django.template import loader
 from django.urls import reverse
 from django.http.response import HttpResponseNotFound, HttpResponseRedirect
 from .models import Empresa
+from random import randint
+
 # Create your views here.
 
 
@@ -25,8 +27,12 @@ def login(request):
     return render(request, 'delphone/login.html')
 
 def cadastro(request):
-    all_entries = Empresa.objects.all().count()
-    context = {'empresas': all_entries}
+    all_entries_count = Empresa.objects.all().count()
+    id = randint (0,201)
+    empresa_ex = Empresa.objects.filter(id=id)
+    context = {'empresas_count': all_entries_count, 
+                'id': id, 
+                'empresa_ex': empresa_ex}
     return render(request, 'delphone/cadastro.html',context)
 
 def como_funcionamos(request):

@@ -10,7 +10,8 @@
 </div>
 
 <div>
-    <p> Empresas cadastradas até o momento: {{empresas}}</p>
+    <p> Empresas cadastradas até o momento: {{empresas_count}}</p>
+    <p> Exemplo de cadastro: {{empresa_ex|cut:"QuerySet"|cut:"<"| cut:">"| cut:"["| cut:"]"|linebreaks}}</p>
     <br>
 </div>
 

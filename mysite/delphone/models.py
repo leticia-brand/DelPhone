@@ -23,9 +23,9 @@ class Empresa (models.Model):
         """Returns the url to access a particular instance of Empresa."""
         return Reversible('empresa-detail', args=[str(self.id)])
 
-    def __str__(self):
+    def __str__(self)-> str:
         """String for representing the Empresa object (in Admin site etc.)."""
-        return f'Nome: {self.nome} <br> Email: {self.email} <br> Celular: {self.celular} <br> Endereço: {self.endereco} <br> Estado: {self.estado} <br> Cidade: {self.cidade} <br> Horário de funcionamento: {self.horario_func} <br> Setor: {self.setor} '
+        return f'Nome: {self.nome} \n Email: {self.email} \n Celular: {self.celular} \n Endereço: {self.endereco} \n Estado: {self.estado} \n Cidade: {self.cidade} \n Horário de funcionamento: {self.horario_func} \n Setor: {self.setor} '
 
     class Meta:
         ordering = ['nome']
