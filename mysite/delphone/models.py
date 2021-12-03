@@ -17,13 +17,15 @@ class Empresa (models.Model):
     horario_func = models.TimeField(auto_now=False, auto_now_add=False, help_text='Digite o horário de funcionamento')
     setor = models.CharField(max_length=30, help_text='')
 
+    objects = models.Manager()
+
     def get_absolute_url(self):
         """Returns the url to access a particular instance of Empresa."""
         return Reversible('empresa-detail', args=[str(self.id)])
 
     def __str__(self):
         """String for representing the Empresa object (in Admin site etc.)."""
-        return self.nome
+        return f'Nome: {self.nome} <br> Email: {self.email} <br> Celular: {self.celular} <br> Endereço: {self.endereco} <br> Estado: {self.estado} <br> Cidade: {self.cidade} <br> Horário de funcionamento: {self.horario_func} <br> Setor: {self.setor} '
 
     class Meta:
         ordering = ['nome']
@@ -57,5 +59,6 @@ for i in range(200):
                 cidade=estados[n][0], 
                 horario_func=fake.date_time(), 
                 setor=setores[m])
-    p.save()
+    '''p.save()
+    Retiramos o comando pois ele adiciona rows todas as vezes'''
 
