@@ -1,4 +1,5 @@
 from faker import Faker
+import random
 
 fake = Faker()
 
@@ -39,6 +40,11 @@ class Empresa(models.Model):
         ordering = ['user']
 '''
 
+estados = pd.read_excel (r'cidades_estados.xlsx').values.tolist()
+setores = ['Alimentação', 'Cozinha', 'Eletrodomésticos', 'Esportes', 'Farmácia', 'Material de construção', 'Mobília', 'Música', 'Papelaria', 'Vestuário']
+
 for i in range(200):
-    p = Empresa(nome=fake.name(), email=fake.email(), celular=fake.phone_number(), endereco=fake.address(), horario_func=fake.date_time(), setor=fake.job())
+    n = random.randint(0, len(estados)-1)
+    m = random.randint(0, len(setores)-1)
+    p = Empresa(nome=fake.company(), email=fake.email(), celular=fake.phone_number(), endereco=fake.address(), estado=estados[n][1], cidade=estados[n][0], horario_func=fake.date_time(), setor=setores[m])
     p.save()
