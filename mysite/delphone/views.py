@@ -4,12 +4,17 @@ from django.template import loader
 from django.urls import reverse
 from django.http.response import HttpResponseNotFound, HttpResponseRedirect
 from .models import Empresa, Busca
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 import random
+from random import randint
 
 # Create your views here.
 
 def menu (request):
-    contexto = {"buscas": Busca.objects.all()}
+    id = randint (0,5001)
+    buscas_ex = Busca.objects.filter(id=id)
+    contexto = {"buscas_ex": buscas_ex, 
+                "id": id}
     return render(request, 'delphone/menu.html', contexto)
 
 def contatos(request):
