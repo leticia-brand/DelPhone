@@ -11,7 +11,7 @@
 
 <div>
     <p> Empresas cadastradas até o momento: {{empresas_count}}</p>
-    <p> Exemplo de cadastro: {{empresa_ex|cut:"QuerySet"|cut:"<"| cut:">"| cut:"["| cut:"]"|linebreaks}}</p>
+    <p> Exemplo de cadastro: {{empresa_ex|cut:"QuerySet"|cut:"<"| cut:">"| cut:"["| cut:"]"| cut:"Empresa:"|linebreaks}}</p>
     <br>
 </div>
 
@@ -37,17 +37,13 @@
               <input type="text" id="enderecoempresa" name="enderecoempresa" placeholder="Rua e n°">
             </label>
 
-            <label for="horariodefuncionamento">
-              <span>Horário de Funcionamento</span>
-              <input type="text" id="horariodefuncionamento" name="horariodefuncionamento" placeholder="Ex.: 12:34 - 23:45">
-            </label>
-
             <label for="tipodeempresa">
               <span>Setor</span>
               <input type="text" id="tipodeempresa" name="tipodeempresa" placeholder="Ex.: Alimentação ou Vestiário.">
             </label>
 
             <input type="submit" value="Cadastrar" id="button">
-
+<br>
         </form>
+        <br>
 {% endblock %}
