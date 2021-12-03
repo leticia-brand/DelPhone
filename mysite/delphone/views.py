@@ -5,10 +5,7 @@ from django.urls import reverse
 from django.http.response import HttpResponseNotFound, HttpResponseRedirect
 # Create your views here.
 
-def index(request):
-    return render(request, 'delphone/index.html')
-
-def menu(request):
+def menu (request):
     return render(request, 'delphone/menu.html')
 
 def contatos(request):
