@@ -1,3 +1,7 @@
+from faker import Faker
+
+fake = Faker()
+
 from django.db import models
 
 class Empresa(models.Model):
@@ -19,10 +23,9 @@ class Empresa(models.Model):
     class Meta:
         ordering = ['nome']
 
-class Usuário(models.Model):
-    estado = models.CharField(max_length=50, help_text='Digite o estado')
+'''class Usuário(models.Model):
+    user = models.CharField(max_length=50, help_text='Digite o nome de usuario')
     cidade = models.CharField(max_length=50, help_text='Digite a cidade')
-    setor = models.CharField(max_length=30, help_text='Digite o setor desejado')
 
     def get_absolute_url(self):
         """Returns the url to access a particular instance of Empresa."""
@@ -30,7 +33,12 @@ class Usuário(models.Model):
 
     def __str__(self):
         """String for representing the Empresa object (in Admin site etc.)."""
-        return self.setor
+        return self.user
 
     class Meta:
-        ordering = ['setor']
+        ordering = ['user']
+'''
+
+for i in range(200):
+    p = Empresa(nome=fake.name(), email=fake.email(), celular=fake.phone_number(), endereco=fake.address(), horario_func=fake.date_time(), setor=fake.job())
+    p.save()
