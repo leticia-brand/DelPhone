@@ -6,6 +6,7 @@ from django.http.response import HttpResponseNotFound, HttpResponseRedirect
 from .models import Empresa
 # Create your views here.
 
+
 def menu (request):
     contexto = {"empresas": Empresa.object.all()}
     return render(request, 'delphone/menu.html', contexto)
