@@ -19,6 +19,8 @@ class Migration(migrations.Migration):
                 ('email', models.CharField(help_text='Digite o email', max_length=50)),
                 ('celular', models.CharField(help_text='Digite o celular (12)34567-8912', max_length=11)),
                 ('endereco', models.CharField(help_text='Digite o endereço (rua e nº)', max_length=200)),
+                ('estado', models.CharField(help_text='Digite o estado', max_length=2)),
+                ('cidade', models.CharField(help_text='Digite a cidade', max_length=200)),
                 ('horario_func', models.TimeField(help_text='Digite o horário de funcionamento', max_length=20)),
                 ('setor', models.CharField(max_length=30)),
             ],
