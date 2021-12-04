@@ -47,4 +47,3 @@ def sobre_nos(request):
 def redireciona(request):
     direcionamento = reverse('delphone')
     return HttpResponseRedirect(direcionamento)
-

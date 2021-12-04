@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'leticia',
     'paloma',
     'pedro',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
