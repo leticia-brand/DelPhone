@@ -12,6 +12,7 @@
 <body>
     {% block conteudo %}
     <h1>Pergunta de negócio a ser explorada: </h1>
+    <p>{{empresas_dfh| safe}}</p>
     {% endblock %}
     {% include 'leticia/rodape.html' %}
     

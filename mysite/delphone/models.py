@@ -4,6 +4,7 @@ import random
 from random import randint
 import pandas as pd
 from django.db import models
+from django_pandas.managers import DataFrameManager
 
 fake = Faker()
 
@@ -23,6 +24,7 @@ class Empresa (models.Model):
     horario_fechamento = models.TimeField(auto_now=False, auto_now_add=False, help_text='Digite o horário de fechamento')
 
     objects = models.Manager()
+    pdobjects = DataFrameManager()
 
     def get_absolute_url(self):
         """Returns the url to access a particular instance of Empresa."""
@@ -42,6 +44,7 @@ class Busca (models.Model):
     setor = models.CharField(max_length=30, help_text='')
 
     objects = models.Manager()
+    pdobjects = DataFrameManager()
 
     def get_absolute_url(self):
         """Returns the url to access a particular instance of Empresa."""
