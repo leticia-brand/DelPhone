@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Empresa, Busca
+'''from .models import Empresa, Busca
 
 admin.site.register(Empresa)
-admin.site.register(Busca)
+admin.site.register(Busca)'''

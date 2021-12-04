@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.urls import reverse
 from django.http.response import HttpResponseNotFound, HttpResponseRedirect
-from .models import Empresa, Busca
+#from .models import Empresa, Busca
 import random
 from random import randint
 
