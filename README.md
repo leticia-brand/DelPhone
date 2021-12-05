@@ -4,8 +4,6 @@ Projeto criado na disciplina Linguagens de Programação por 5 estudantes da FGV
 ## O projeto
 O projeto consiste em uma plataforma gratuita que facilita o acesso aos contatos de delivery próximos ao usuário e promove a divulgação de empresas locais.
 
-[delphone.w3spaces.com](https://delphone.w3spaces.com)
-
 ## Integrantes
 - [André Felipe](https://github.com/Ferreira-05)
 - [Darlan Araújo](https://github.com/Darlan369)
@@ -17,7 +15,7 @@ O projeto consiste em uma plataforma gratuita que facilita o acesso aos contatos
 Todas as páginas possuem cabeçalho e rodapé funcionais que levam às outras páginas, além da área de login que pode ser acessada ao clicar-se no cadeado no canto superior direito.
 
 ### Home (home.html)
-Página inicial, com um carrossel de imagens, uma breve descrição e um carrossel de feedbacks.
+Página inicial, com um carrossel de imagens, uma breve descrição e um carrossel de feedbacks. Além disso, possui o campo de buscas para o usuário inserir sua cidade, estado e setor em que deseja buscar o serviço/empresa.
 
 ### Como funcionamos (como_funcionamos.html)
 Página com o passo a passo de como utilizar a plataforma.
@@ -32,7 +30,7 @@ Página de apresentação do projeto. Possui descrição e foto dos integrantes,
 Página com as possíveis formas de contato.
 
 ### Acesso restrito (login.html)
-Área do usuário, o formulário de login pode ser acessado clicando no cadeado no canto superior direito.
+Área de login das empresas, para que possam modificar informações sobre seu cadastro. O formulário de login pode ser acessado clicando no cadeado no canto superior direito.
 
 ### Cadastrar (cadastro.html)
 Página com o formulário de cadastro das empresas. 
