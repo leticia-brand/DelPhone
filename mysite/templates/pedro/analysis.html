@@ -14256,10 +14256,21 @@ a.anchor-link {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="An&#225;lise-a-respeito-do-n&#250;mero-de-funcion&#225;rios">An&#225;lise a respeito do n&#250;mero de funcion&#225;rios<a class="anchor-link" href="#An&#225;lise-a-respeito-do-n&#250;mero-de-funcion&#225;rios">&#182;</a></h1>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Importando bibliotecas necessárias:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -14274,10 +14285,16 @@ a.anchor-link {
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Base de dados:</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;../db.sqlite3&#39;</span><span class="p">)</span>
@@ -14308,7 +14325,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
 
@@ -14438,17 +14455,25 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Quais setores têm a maior e a menor média de funcionários por empresa?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Como observado na tabela e no gráfico abaixo, o setor Cozinha tem a maior média de funcionários por empresa e o setor Papelaria tem a menor média de funcionários por empresa.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Quais setores têm a maior e a menor média de funcionários por empresa?</span>
-
-<span class="c1"># R = Como observado na tabela abaixo, o setor Cozinha tem a maior média de funcionários por empresa e o setor Papelaria tem a menor média de funcionários por empresa.</span>
-
-<span class="n">setor_media</span> <span class="o">=</span> <span class="n">empresa</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;setor&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;n_funcionario&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">setor_media</span> <span class="o">=</span> <span class="n">empresa</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;setor&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;n_funcionario&#39;</span><span class="p">)</span>
 <span class="n">Setores</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Papelaria&quot;</span><span class="p">,</span><span class="s2">&quot;Farmácia&quot;</span><span class="p">,</span><span class="s2">&quot;Alimentação&quot;</span><span class="p">,</span><span class="s2">&quot;Esportes&quot;</span><span class="p">,</span><span class="s2">&quot;Vestuário&quot;</span><span class="p">,</span><span class="s2">&quot;Material de construção&quot;</span><span class="p">,</span><span class="s2">&quot;Eletrodomésticos&quot;</span><span class="p">,</span><span class="s2">&quot;Música&quot;</span><span class="p">,</span><span class="s2">&quot;Mobília&quot;</span><span class="p">,</span><span class="s2">&quot;Cozinha&quot;</span><span class="p">]</span>
 <span class="n">Média</span> <span class="o">=</span> <span class="p">[</span><span class="mf">479.042</span><span class="p">,</span><span class="mf">484.222</span><span class="p">,</span><span class="mf">484.920</span><span class="p">,</span><span class="mf">489.159</span><span class="p">,</span><span class="mf">489.692</span><span class="p">,</span><span class="mf">513.663</span><span class="p">,</span><span class="mf">518.474</span><span class="p">,</span><span class="mf">525.857</span><span class="p">,</span><span class="mf">528.704</span><span class="p">,</span><span class="mf">535.080</span><span class="p">]</span>
 
@@ -14478,7 +14503,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -14600,17 +14625,25 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Quais estados têm a maior e a menor média de funcionários por empresa?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Como observado na tabela e no gráfico abaixo, Espírito Santo tem a maior média de funcionários por empresa e Amapá tem a menor média de funcionários por empresa.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Quais estados têm a maior e a menor média de funcionários por empresa?</span>
-
-<span class="c1"># R = Como observado na tabela abaixo, Espírito Santo tem a maior média de funcionários por empresa e Amapá tem a menor média de funcionários por empresa.</span>
-
-<span class="n">estado_media</span> <span class="o">=</span> <span class="n">empresa</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;estado&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;n_funcionario&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">estado_media</span> <span class="o">=</span> <span class="n">empresa</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;estado&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;n_funcionario&#39;</span><span class="p">)</span>
 
 <span class="n">Siglas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;AP&quot;</span><span class="p">,</span><span class="s2">&quot;DF&quot;</span><span class="p">,</span><span class="s2">&quot;AC&quot;</span><span class="p">,</span><span class="s2">&quot;PE&quot;</span><span class="p">,</span><span class="s2">&quot;GO&quot;</span><span class="p">,</span><span class="s2">&quot;SE&quot;</span><span class="p">,</span><span class="s2">&quot;AM&quot;</span><span class="p">,</span><span class="s2">&quot;PR&quot;</span><span class="p">,</span><span class="s2">&quot;PB&quot;</span><span class="p">,</span><span class="s2">&quot;RN&quot;</span><span class="p">,</span><span class="s2">&quot;MA&quot;</span><span class="p">,</span><span class="s2">&quot;MT&quot;</span><span class="p">,</span><span class="s2">&quot;MG&quot;</span><span class="p">,</span><span class="s2">&quot;SC&quot;</span><span class="p">,</span><span class="s2">&quot;RS&quot;</span><span class="p">,</span><span class="s2">&quot;PA&quot;</span><span class="p">,</span><span class="s2">&quot;SP&quot;</span><span class="p">,</span><span class="s2">&quot;RO&quot;</span><span class="p">,</span><span class="s2">&quot;MS&quot;</span><span class="p">,</span><span class="s2">&quot;TO&quot;</span><span class="p">,</span><span class="s2">&quot;RJ&quot;</span><span class="p">,</span><span class="s2">&quot;RR&quot;</span><span class="p">,</span><span class="s2">&quot;AL&quot;</span><span class="p">,</span><span class="s2">&quot;PI&quot;</span><span class="p">,</span><span class="s2">&quot;BA&quot;</span><span class="p">,</span><span class="s2">&quot;CE&quot;</span><span class="p">,</span><span class="s2">&quot;ES&quot;</span><span class="p">]</span>
 <span class="n">Média</span> <span class="o">=</span> <span class="p">[</span><span class="mf">122.000</span><span class="p">,</span><span class="mf">271.000</span><span class="p">,</span><span class="mf">303.800</span><span class="p">,</span><span class="mf">451.870</span><span class="p">,</span><span class="mf">457.783</span><span class="p">,</span><span class="mf">459.583</span><span class="p">,</span><span class="mf">463.928</span><span class="p">,</span><span class="mf">472.441</span><span class="p">,</span><span class="mf">476.153</span><span class="p">,</span><span class="mf">483.121</span><span class="p">,</span><span class="mf">483.457</span><span class="p">,</span><span class="mf">483.540</span><span class="p">,</span><span class="mf">493.783</span><span class="p">,</span><span class="mf">503.949</span><span class="p">,</span><span class="mf">512.355</span><span class="p">,</span><span class="mf">513.714</span><span class="p">,</span><span class="mf">518.653</span><span class="p">,</span><span class="mf">523.600</span><span class="p">,</span><span class="mf">527.692</span><span class="p">,</span><span class="mf">529.066</span><span class="p">,</span><span class="mf">532.705</span><span class="p">,</span><span class="mf">548.800</span><span class="p">,</span><span class="mf">550.222</span><span class="p">,</span><span class="mf">551.411</span><span class="p">,</span><span class="mf">551.851</span><span class="p">,</span><span class="mf">568.387</span><span class="p">,</span><span class="mf">615.750</span><span class="p">]</span>
@@ -14638,7 +14671,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
@@ -14862,17 +14895,25 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Quais setores têm a maior e a menor quantidade de funcionários?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Como observado na tabela e no gráfico abaixo, o setor Mobília tem a maior quantidade de funcionários e o setor Alimentação tem a menor quantidade de funcionários.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Quais setores têm a maior e a menor quantidade de funcionários?</span>
-
-<span class="c1"># R = Como observado na tabela abaixo, o setor Mobília tem a maior quantidade de funcionários e o setor Alimentação tem a menor quantidade de funcionários.</span>
-
-<span class="n">setor_soma</span> <span class="o">=</span> <span class="n">empresa</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;setor&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;n_funcionario&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">setor_soma</span> <span class="o">=</span> <span class="n">empresa</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;setor&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;n_funcionario&#39;</span><span class="p">)</span>
 
 <span class="n">Setores</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alimentação&quot;</span><span class="p">,</span><span class="s2">&quot;Papelaria&quot;</span><span class="p">,</span><span class="s2">&quot;Material de construção&quot;</span><span class="p">,</span><span class="s2">&quot;Eletrodomésticos&quot;</span><span class="p">,</span><span class="s2">&quot;Vestuário&quot;</span><span class="p">,</span><span class="s2">&quot;Música&quot;</span><span class="p">,</span><span class="s2">&quot;Farmácia&quot;</span><span class="p">,</span><span class="s2">&quot;Cozinha&quot;</span><span class="p">,</span><span class="s2">&quot;Esportes&quot;</span><span class="p">,</span><span class="s2">&quot;Mobília&quot;</span><span class="p">]</span>
 <span class="n">Funcionários</span> <span class="o">=</span> <span class="p">[</span><span class="mf">42673.0</span><span class="p">,</span><span class="mf">45509.0</span><span class="p">,</span><span class="mf">47257.0</span><span class="p">,</span><span class="mf">50292.0</span><span class="p">,</span><span class="mf">50928.0</span><span class="p">,</span><span class="mf">51534.0</span><span class="p">,</span><span class="mf">52296.0</span><span class="p">,</span><span class="mf">53508.0</span><span class="p">,</span><span class="mf">55275.0</span><span class="p">,</span><span class="mf">55514.0</span><span class="p">]</span>
@@ -14900,7 +14941,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -15022,17 +15063,25 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Quais estados têm a maior e a menor quantidade de funcionários?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Como observado na tabela e no gráfico abaixo, Minas Gerais tem a maior quantidade de funcionários e Amapá tem a menor quantidade de funcionários.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Quais estados têm a maior e a menor quantidade de funcionários?</span>
-
-<span class="c1"># R = Como observado na tabela e no gráfico abaixo, Minas Gerais tem a maior quantidade de funcionários e Amapá tem a menor quantidade de funcionários.</span>
-
-<span class="n">estado_soma</span> <span class="o">=</span> <span class="n">empresa</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;estado&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;n_funcionario&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">estado_soma</span> <span class="o">=</span> <span class="n">empresa</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;estado&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;n_funcionario&#39;</span><span class="p">)</span>
 
 <span class="n">Estados</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;AP&quot;</span><span class="p">,</span><span class="s2">&quot;DF&quot;</span><span class="p">,</span><span class="s2">&quot;AC&quot;</span><span class="p">,</span><span class="s2">&quot;RR&quot;</span><span class="p">,</span><span class="s2">&quot;RO&quot;</span><span class="p">,</span><span class="s2">&quot;SE&quot;</span><span class="p">,</span><span class="s2">&quot;AM&quot;</span><span class="p">,</span><span class="s2">&quot;MS&quot;</span><span class="p">,</span><span class="s2">&quot;TO&quot;</span><span class="p">,</span><span class="s2">&quot;RJ&quot;</span><span class="p">,</span><span class="s2">&quot;ES&quot;</span><span class="p">,</span><span class="s2">&quot;AL&quot;</span><span class="p">,</span><span class="s2">&quot;PA&quot;</span><span class="p">,</span><span class="s2">&quot;PE&quot;</span><span class="p">,</span><span class="s2">&quot;MA&quot;</span><span class="p">,</span><span class="s2">&quot;GO&quot;</span><span class="p">,</span><span class="s2">&quot;CE&quot;</span><span class="p">,</span><span class="s2">&quot;MT&quot;</span><span class="p">,</span><span class="s2">&quot;PB&quot;</span><span class="p">,</span><span class="s2">&quot;PI&quot;</span><span class="p">,</span><span class="s2">&quot;RN&quot;</span><span class="p">,</span><span class="s2">&quot;SC&quot;</span><span class="p">,</span><span class="s2">&quot;PR&quot;</span><span class="p">,</span><span class="s2">&quot;BA&quot;</span><span class="p">,</span><span class="s2">&quot;RS&quot;</span><span class="p">,</span><span class="s2">&quot;SP&quot;</span><span class="p">,</span><span class="s2">&quot;MG&quot;</span><span class="p">]</span>
 <span class="n">Funcionários</span> <span class="o">=</span> <span class="p">[</span><span class="mf">122.0</span><span class="p">,</span><span class="mf">271.0</span><span class="p">,</span><span class="mf">1519.0</span><span class="p">,</span><span class="mf">2744.0</span><span class="p">,</span><span class="mf">5236.0</span><span class="p">,</span><span class="mf">5515.0</span><span class="p">,</span><span class="mf">6495.0</span><span class="p">,</span><span class="mf">6860.0</span><span class="p">,</span><span class="mf">7936.0</span><span class="p">,</span><span class="mf">9056.0</span><span class="p">,</span><span class="mf">9852.0</span><span class="p">,</span><span class="mf">9904.0</span><span class="p">,</span><span class="mf">10788.0</span><span class="p">,</span><span class="mf">14008.0</span><span class="p">,</span><span class="mf">16921.0</span><span class="p">,</span><span class="mf">16938.0</span><span class="p">,</span><span class="mf">17620.0</span><span class="p">,</span><span class="mf">17891.0</span><span class="p">,</span><span class="mf">18570.0</span><span class="p">,</span><span class="mf">18748.0</span><span class="p">,</span><span class="mf">19808.0</span><span class="p">,</span><span class="mf">29733.0</span><span class="p">,</span><span class="mf">36378.0</span><span class="p">,</span><span class="mf">40837.0</span><span class="p">,</span><span class="mf">46112.0</span><span class="p">,</span><span class="mf">64313.0</span><span class="p">,</span><span class="mf">70611.0</span><span class="p">]</span>
@@ -15060,7 +15109,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15282,20 +15331,6 @@ a.anchor-link {
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div>
