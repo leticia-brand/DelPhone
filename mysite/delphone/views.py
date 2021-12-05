@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.urls import reverse
 from django.http.response import HttpResponseNotFound, HttpResponseRedirect
-#from .models import Empresa, Busca
+from .models import Empresa, Busca
 import random
 from random import randint
 
@@ -12,9 +12,8 @@ from random import randint
 def menu (request):
     id = randint (0,5001)
     buscas_ex = Busca.objects.filter(id=id)
-    contexto = {"buscas_ex": buscas_ex, 
-                "id": id}
-    return render(request, 'delphone/menu.html', contexto)
+    context = {"buscas_ex": buscas_ex, "id": id}
+    return render(request, 'delphone/menu.html', context)
 
 def contatos(request):
     dias_semana = ["SEGUNDA","TERÇA","QUARTA","QUINTA","SEXTA"]
